@@ -13,6 +13,11 @@ st.set_page_config(
 load_dotenv()
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
+# If not found, try Streamlit secrets (cloud)
+if not API_KEY:
+    API_KEY = st.secrets.get("OPENWEATHER_API_KEY", None)
+
+# If still not found, then show error and stop
 if not API_KEY:
     st.error("❌ API key not found. Check your .env file.")
     st.stop()
