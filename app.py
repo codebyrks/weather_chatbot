@@ -120,4 +120,4 @@ if city:
         st.error("❌ City not found or API error.")
 
 st.markdown(f"""
-<footer><p>Made By Rohit Kumar Shah</p></footer>""", unsafe_allow_html=True)
+<footer><p>Created By <b>Rohit Kumar Shah</b></p></footer>""", unsafe_allow_html=True)
